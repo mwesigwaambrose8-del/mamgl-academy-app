@@ -1,0 +1,136 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #172554;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: #071b49;
+  color: white;
+  padding: 25px 6%;
+  text-align: center;
+}
+
+.header h2 {
+  font-size: 30px;
+  color: #f5c542;
+}
+
+.header h2 span {
+  color: white;
+}
+
+.header p {
+  margin: 8px 0 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+button {
+  background: #d6a928;
+  color: #071b49;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px;
+}
+
+button:hover {
+  background: #f5c542;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #071b49, #164e9b);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  color: #f5c542;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  line-height: 1.8;
+}
+
+.content {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 25px;
+}
+
+.content h1 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+article {
+  background: white;
+  padding: 22px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px #00000012;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+footer {
+  background: #071b49;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  margin-top: 50px;
+  line-height: 2;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 65px 20px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .content {
+    padding: 18px;
+  }
+}
