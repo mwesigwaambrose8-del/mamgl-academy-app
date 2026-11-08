@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fc;
+  color: #071b49;
+}
+
+header {
+  background: #071b49;
+  color: white;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+header h2 {
+  color: #f5bd22;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  background: #f5bd22;
+  color: #071b49;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffffff;
+}
+
+section {
+  padding: 55px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(135deg, #071b49, #1456b8);
+  color: white;
+  max-width: none;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #f5bd22;
+}
+
+.hero h2 {
+  font-size: 25px;
+}
+
+article {
+  background: white;
+  padding: 20px;
+  margin: 12px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px #00000012;
+}
+
+form {
+  max-width: 450px;
+  margin: 20px auto;
+}
+
+input, select {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #ccd4e2;
+  border-radius: 7px;
+}
+
+footer {
+  background: #071b49;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  nav button {
+    padding: 10px;
+  }
+}
