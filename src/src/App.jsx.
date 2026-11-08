@@ -1,0 +1,79 @@
+import React, { useState } from "react";
+
+export default function App() {
+  const [page, setPage] = useState("Home");
+
+  const courses = ["Senior One (S1)", "Senior Two (S2)", "Senior Three (S3)", "Senior Four (S4)", "Advanced Level"];
+
+  return (
+    <div>
+      <header>
+        <h2>MA MATHEMATICS GLOBAL LEARNING</h2>
+        <p>MAMGL | Learn • Practice • Excel</p>
+        <nav>
+          {["Home", "Courses", "About", "Register", "Login"].map(item => (
+            <button onClick={() => setPage(item)} key={item}>{item}</button>
+          ))}
+        </nav>
+      </header>
+
+      {page === "Home" && (
+        <section className="hero">
+          <h1>Mathematics Beyond Borders</h1>
+          <h2>Quality Mathematics Education for a Brighter Future</h2>
+          <p>Welcome to MA Mathematics Global Learning.</p>
+          <button onClick={() => setPage("Register")}>Join MAMGL Today</button>
+        </section>
+      )}
+
+      {page === "Courses" && (
+        <section>
+          <h1>Our Mathematics Programmes</h1>
+          {courses.map(course => <article key={course}>{course}</article>)}
+        </section>
+      )}
+
+      {page === "About" && (
+        <section>
+          <h1>About MAMGL</h1>
+          <p>MA Mathematics Global Learning is committed to making quality mathematics education accessible to learners worldwide.</p>
+          <h3>Our Vision</h3>
+          <p>To become an internationally recognised mathematics learning brand.</p>
+          <h3>Our Mission</h3>
+          <p>To help learners understand mathematics and achieve academic excellence.</p>
+        </section>
+      )}
+
+      {page === "Register" && (
+        <section>
+          <h1>Student Registration</h1>
+          <form>
+            <input placeholder="Full Name" required />
+            <input type="email" placeholder="Email Address" required />
+            <input placeholder="Phone Number" />
+            <select>
+              {courses.map(course => <option key={course}>{course}</option>)}
+            </select>
+            <button type="button">Submit Registration</button>
+          </form>
+        </section>
+      )}
+
+      {page === "Login" && (
+        <section>
+          <h1>Student Login</h1>
+          <form>
+            <input type="email" placeholder="Email Address" />
+            <input type="password" placeholder="Password" />
+            <button type="button">Login</button>
+          </form>
+        </section>
+      )}
+
+      <footer>
+        <p>© 2026 MA Mathematics Global Learning (MAMGL)</p>
+        <p>Academic Excellence | Integrity | Innovation</p>
+      </footer>
+    </div>
+  );
+}
